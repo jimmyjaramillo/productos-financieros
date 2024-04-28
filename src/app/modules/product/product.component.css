@@ -1,0 +1,92 @@
+.product_form_container {
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.product_form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grid_container {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid_item {
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+  display: inherit;
+}
+
+.grid_action_buttons {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 0.1fr 0.1fr 0.1fr;
+  gap: 5px;
+}
+
+.grid_action_buttons_update {
+  padding-top: 3%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 0.1fr 0.1fr;
+  gap: 5px;
+  padding-bottom: 3%;
+
+}
+
+.title_form {
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  border-bottom: 1px solid gray;
+  padding-bottom: 3%;
+  color: #15295F;
+}
+
+.invalid {
+  border: 2px solid red;
+  background-color: rgb(250, 236, 236);
+}
+
+.valid {
+  border: 2px solid green;
+  background-color: #dfd;
+}
+
+.error_message {
+  color: red;
+  font-size: 12px;
+}
+
+label {
+  color:#15295F;
+  font-weight: 700;
+}
+
+input {
+  height: 30px;
+}
+
+.readonly_input{
+  border: 2px solid gray;
+  background-color: rgb(181, 183, 185);
+}
+
+@media (max-width: 600px) {
+  .grid_container {
+    grid-template-columns: none;
+  }
+}

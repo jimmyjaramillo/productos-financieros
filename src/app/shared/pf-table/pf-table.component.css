@@ -1,0 +1,96 @@
+.footer-table {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-pagination {
+  display: flex;
+}
+
+.table-container {
+  overflow-x: auto;
+  height: 500px;
+  background-color: white;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;;
+  text-align: left;
+  height: 50px;
+  color: #555658;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dropdown_container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px grey;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown_menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown_menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.custom_center {
+  text-align: center;
+}
+
+.button_info {
+  border: solid;
+  border-radius: 50%;
+  color: white;
+  background-color: #555658;
+  font-weight: 700;
+}
+
+
+@media screen and (max-width: 600px) {
+  table tr th:nth-child(3),
+  table tr td:nth-child(3){
+    display: none;
+  }
+}
+
+

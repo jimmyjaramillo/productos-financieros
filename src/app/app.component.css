@@ -1,0 +1,26 @@
+header{
+  background-color: white;
+  color: #15295F;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  margin-left: 10px;
+}
+
+img{
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 24px;
+  }
+}

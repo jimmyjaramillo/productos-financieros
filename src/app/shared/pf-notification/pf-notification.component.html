@@ -1,0 +1,6 @@
+<div *ngIf="visible" class="notification" [ngClass]="type">
+  <button class="close_button" (click)="close()">X</button>
+  <div class="notification_content">
+    {{message}}
+  </div>
+</div>

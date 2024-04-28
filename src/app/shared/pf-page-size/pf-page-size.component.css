@@ -1,0 +1,8 @@
+.dropdown{
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: relative;
+  min-width: 5rem;
+}

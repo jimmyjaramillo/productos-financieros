@@ -1,0 +1,14 @@
+<div class="home_container">
+  <app-pf-notification></app-pf-notification>
+  <div class="bar_options">
+    <app-pf-input inputType="text" placeholder="Buscar..." (valueChanged)="filterProducts($event)"></app-pf-input>
+    <app-pf-button label="Agregar" (buttonClick)="addProduct()"></app-pf-button>
+  </div>
+  <app-pf-table *ngIf="!loading" [items]="productsFiltered" [fields]="fields" (edit)="editProduct($event)"></app-pf-table>
+  <div *ngIf="loading" class="skeleton">
+    <div class="skeleton_row"></div>
+    <div class="skeleton_row"></div>
+    <div class="skeleton_row"></div>
+    <div class="skeleton_row"></div>
+  </div>
+</div>

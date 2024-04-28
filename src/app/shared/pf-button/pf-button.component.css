@@ -1,0 +1,25 @@
+.custom_button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #15295F;
+  cursor: pointer;
+  font-weight: 700;
+}
+.custom_button_primary {
+  background-color: #F4DF66;
+  color: #15295F;
+
+}
+.custom_button_secondary {
+  background-color: lightgrey;
+  color: #15295F;
+
+}
+
+@media screen and (max-width: 768px) {
+  .custom_button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

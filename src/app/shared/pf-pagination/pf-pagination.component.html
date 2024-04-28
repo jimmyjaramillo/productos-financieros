@@ -1,0 +1,9 @@
+<div>
+  <button [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+    Previo
+  </button>
+  <span>Página {{currentPage}} de {{totalPages}}</span>
+  <button [disabled]="currentPage === totalPages" (click)="changePage(currentPage + 1)">
+    Siguiente
+  </button>
+</div>

@@ -1,0 +1,47 @@
+<div class="table-container">
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th *ngFor="let field of fields" [ngClass]="{custom_center: field.align === 'center'}">
+          {{field.label}}
+          <button *ngIf="field.tooltip"class="button_info" (mouseenter)="tooltip.show()" (mouseleave)="tooltip.hide()">i</button>
+          <app-pf-tooltip #tooltip [message]="field.tooltip"></app-pf-tooltip>
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of getPaginatedItems()">
+        <td *ngFor="let field of fields" [ngClass]="{custom_center: field.align === 'center'}">
+          <ng-container *ngIf="field.type === 'img'">
+            <img [src]="item[field.key]" alt="logo"/>
+          </ng-container>
+          <ng-container *ngIf="field.type === 'date'">
+            {{item[field.key] | date: 'dd/MM/yyyy'}}
+          </ng-container>
+          <ng-container *ngIf="field.type === 'string'">
+            {{item[field.key]}}
+          </ng-container>
+        </td>
+        <td>
+          <div class="dropdown_container">
+            <button class="dropdown_button" (click)="toggleDropdown($event)">⋮</button>
+            <ul class="dropdown_menu">
+              <li (click)="editItem(item)" (keyup.enter)="editItem(item)">
+                Edit
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer-table">
+    <div><span>{{items.length}} Resultados</span></div>
+    <div class="footer-pagination">
+      <app-pf-page-size (pageSizeChange)="onPageSizeChange($event)"></app-pf-page-size>
+      <app-pf-pagination [currentPage]="currentPage" [totalPages]="totalPages" (pageChange)="onPageChange($event)"></app-pf-pagination>
+    </div>
+  </div>
+</div>
+

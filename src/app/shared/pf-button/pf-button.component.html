@@ -1,0 +1,8 @@
+<button
+  class="custom_button"
+  [type]="type"
+  [ngClass]="{custom_button_primary: kind === 'primary', custom_button_secondary:  kind === 'secondary'}"
+  (click)="onClick()"
+  >
+  {{label}}
+</button>
