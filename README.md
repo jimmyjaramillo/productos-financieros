@@ -19,5 +19,5 @@ Run `npm test` to execute the unit tests via [Jest](https://jestjs.io) to see th
 ![Logo de mi proyecto](src/assets/unitTests.png)
 
 There is a `.env.example` file in the root directory, please rename this file as `.env` and modify the following keys:
-  1 => API_URL with the given URL
-  2 => AUTHOR_ID with the given number.
+  1. API_URL with the given URL
+  2. AUTHOR_ID with the given number.
